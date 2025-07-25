@@ -65,6 +65,62 @@ Follow the steps below to run the project locally:
    git clone https://github.com/your-username/inventory-system.git
    cd inventory-system
 
+### 📥 **Installation Steps**
+
+2. **Create and activate virtual environment**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # On Windows: venv\Scripts\activate
+### 📥 **Installation Steps**
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/<your-username>/<your-repo-name>.git
+    cd <your-repo-name>
+    ```
+
+2.  **Create and activate virtual environment**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate   # On Windows: venv\Scripts\activate
+    ```
+
+3.  **Install dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Set up your `.env` file**
+    Create a `.env` file in the project root and add your configuration:
+    ```ini
+    SECRET_KEY=your_secret_key
+    DEBUG=True
+    DATABASE_URL=postgres://username:password@localhost:5432/your_db_name
+    DB_NAME=your_database_name
+    DB_USER=your_database_user
+    DB_PASSWORD=password_of_database
+    DB_PORT=port number
+    DB_HOST=localhost
+    ```
+
+5.  **Apply migrations**
+    ```bash
+    python manage.py migrate
+    ```
+
+6.  **Create a superuser (admin)**
+    ```bash
+    python manage.py createsuperuser
+    ```
+    *Follow the prompts to set a username, email, and password.*
+
+7.  **Run the development server**
+    ```bash
+    python manage.py runserver
+    ```
+    *The server will start, typically at `http://127.0.0.1:8000/`.*
+   
+
 
 API Endpoints:
 
