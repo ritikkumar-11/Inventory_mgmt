@@ -1,35 +1,63 @@
-Inventory Management System (Backend - Django Rest Framework)
+📦 Inventory Management System (Backend - Django Rest Framework)
+This is a backend application for managing inventory, built using Django Rest Framework (DRF). It provides RESTful APIs for user authentication and product management.
 
-This project is a backend application for managing inventory, built using Django Rest Framework (DRF). It provides RESTful APIs for user authentication and product management.
+✅ Features Implemented
+🔐 User Authentication (Registration & Login with JWT)
 
-Features Implemented:
+➕ Add New Products
 
-User Authentication (Registration & Login with JWT)
+🔄 Update Product Quantity
 
-Add New Products
+📄 Get List of Products (with Pagination)
 
-Update Product Quantity
+🚀 Stretch Goals Attempted
+🛠️ Basic Admin Portal: Utilized Django's built-in admin interface for managing data
 
-Get List of Products (with pagination)
-
-Stretch Goals Attempted:
-
-Basic Admin Portal: Utilized Django's built-in admin interface for managing data.
-
-Technologies Used:
-
+🛠️ Technologies Used
 Language/Framework: Python, Django Rest Framework (DRF)
+
 Database: PostgreSQL
 
 Authentication: Simple JWT (djangorestframework-simplejwt)
 
-API Documentation: Django REST Swagger or DRF-Spectacular
+API Documentation: Swagger (drf-yasg) or DRF Spectacular
 
-Other Libraries: djangorestframework-simplejwt
+Other Libraries:
 
-Database Schema:
-Users Table: Managed by Django's default User model.
-Products Table: Custom model storing product details (name, type, sku, image_url, description, quantity, price).
+djangorestframework
+
+djangorestframework-simplejwt
+
+🗃️ Database Schema
+Users Table: Managed by Django's default User model
+
+Products Table:
+
+name
+
+type
+
+sku
+
+image_url
+
+description
+
+quantity
+
+price
+
+⚙️ Setup & Run Project
+Follow the steps below to run the project locally:
+
+🔧 Prerequisites
+Python 3.8+
+
+PostgreSQL
+
+pip (Python package manager)
+
+Virtualenv (optional but recommended)
 
 
 API Endpoints:
