@@ -5,12 +5,17 @@ This project is a backend application for managing inventory, built using Django
 Features Implemented:
 
 User Authentication (Registration & Login with JWT)
+
 Add New Products
+
 Update Product Quantity
+
 Get List of Products (with pagination)
+
 Stretch Goals Attempted (Optional):
 
-[List any stretch goals you implemented here, e.g., "Basic Admin Portal via Django Admin", "Dockerization", "Basic Analytics"] or remove this section if none.
+Basic Admin Portal: Utilized Django's built-in admin interface for managing data.
+
 Technologies Used:
 
 Language/Framework: Python, Django Rest Framework (DRF)
@@ -19,14 +24,13 @@ Authentication: Simple JWT (djangorestframework-simplejwt)
 API Documentation: Django REST Swagger or DRF-Spectacular (Specify which you used, or remove if not implemented)
 Other Libraries: djangorestframework-simplejwt
 Database Schema:
-
-Include a description or an image of your database schema here if you have one readily available. Otherwise, the models are defined in models.py.
-
 Users Table: Managed by Django's default User model.
 Products Table: Custom model storing product details (name, type, sku, image_url, description, quantity, price).
+
+
 API Endpoints:
 
-Detailed API documentation might be available via a tool like Swagger UI if you integrated it (typically at http://<your-server-url>/swagger/ or /api/docs/). Otherwise, the core endpoints are:
+Detailed API documentation might be available via a tool like Swagger UI:
 
 POST /api/register/: Register a new user.
 <img width="1737" height="831" alt="Screenshot from 2025-07-25 19-32-42" src="https://github.com/user-attachments/assets/b1e02c40-0c21-44b0-b894-58e30c131771" />
