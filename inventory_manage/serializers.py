@@ -7,10 +7,13 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ['username', 'password']
 
     def create(self, validated_data):
-        user = User(username = validated_data['username'])
-        user.set_password(validated_data['password'])
-        user.save()
-        return user
+        try:
+            user = User(username=validated_data['username'])
+            user.set_password(validated_data['password'])
+            user.save()
+            return user
+        except Exception as e:
+            raise serializers.ValidationError({"error": str(e)})
 
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -25,22 +28,17 @@ class ProductSerializer(serializers.ModelSerializer):
             'quantity',
             'price',
         ]
-    def get_name(self, request, *args, **kwargs):
-        print(request.name, self.name)
-        return request.name
-    def get_type(self, request):
-        return request.type
 
     def validate_quantity(self, value):
         if value < 0:
-            raise serializers.ValidationError("Quantity should be greater that 0")
+            raise serializers.ValidationError("Quantity should be greater than 0")
         return value
-    
+
     def validate_price(self, value):
         if value < 0:
-            raise serializers.ValidationError("Price should be > 0")
+            raise serializers.ValidationError("Price should be greater than 0")
         return value
-    
+
 
 class UpdateProductSerializer(serializers.ModelSerializer):
     class Meta:
@@ -49,16 +47,13 @@ class UpdateProductSerializer(serializers.ModelSerializer):
 
     def validate_quantity(self, value):
         if value < 0:
-            raise serializers.ValidationError("Quantity should be greater that 0")
+            raise serializers.ValidationError("Quantity should be greater than 0")
         return value
-    
+
     def update(self, instance, validated_data):
-        instance.quantity = validated_data.get('quantity', instance.quantity)
-        instance.save()
-        return instance
-    
-
-
-
-
-        
+        try:
+            instance.quantity = validated_data.get('quantity', instance.quantity)
+            instance.save()
+            return instance
+        except Exception as e:
+            raise serializers.ValidationError({"error": str(e)})
