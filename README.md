@@ -1,6 +1,6 @@
 Inventory Management System (Backend - Django Rest Framework)
 
-This project is a backend application for managing inventory, built using Django Rest Framework (DRF) as part of a coding assignment. It provides RESTful APIs for user authentication and product management.
+This project is a backend application for managing inventory, built using Django Rest Framework (DRF). It provides RESTful APIs for user authentication and product management.
 
 Features Implemented:
 
@@ -12,7 +12,7 @@ Update Product Quantity
 
 Get List of Products (with pagination)
 
-Stretch Goals Attempted (Optional):
+Stretch Goals Attempted:
 
 Basic Admin Portal: Utilized Django's built-in admin interface for managing data.
 
@@ -20,9 +20,13 @@ Technologies Used:
 
 Language/Framework: Python, Django Rest Framework (DRF)
 Database: PostgreSQL
+
 Authentication: Simple JWT (djangorestframework-simplejwt)
-API Documentation: Django REST Swagger or DRF-Spectacular (Specify which you used, or remove if not implemented)
+
+API Documentation: Django REST Swagger or DRF-Spectacular
+
 Other Libraries: djangorestframework-simplejwt
+
 Database Schema:
 Users Table: Managed by Django's default User model.
 Products Table: Custom model storing product details (name, type, sku, image_url, description, quantity, price).
