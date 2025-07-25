@@ -1,63 +1,69 @@
-📦 Inventory Management System (Backend - Django Rest Framework)
-This is a backend application for managing inventory, built using Django Rest Framework (DRF). It provides RESTful APIs for user authentication and product management.
+# 📦 **Inventory Management System** (Backend - Django Rest Framework)
 
-✅ Features Implemented
-🔐 User Authentication (Registration & Login with JWT)
+This is a **backend application** for managing inventory, built using **Django Rest Framework (DRF)**. It provides **RESTful APIs** for **user authentication** and **product management**.
 
-➕ Add New Products
+---
 
-🔄 Update Product Quantity
+## ✅ **Features Implemented**
 
-📄 Get List of Products (with Pagination)
+- 🔐 **User Authentication** (Registration & Login with **JWT**)
+- ➕ **Add New Products**
+- 🔄 **Update Product Quantity**
+- 📄 **Get List of Products** (with **Pagination**)
 
-🚀 Stretch Goals Attempted
-🛠️ Basic Admin Portal: Utilized Django's built-in admin interface for managing data
+---
 
-🛠️ Technologies Used
-Language/Framework: Python, Django Rest Framework (DRF)
+## 🚀 **Stretch Goals Attempted**
 
-Database: PostgreSQL
+- 🛠️ **Basic Admin Portal**: Utilized Django's built-in **admin interface** for managing data
 
-Authentication: Simple JWT (djangorestframework-simplejwt)
+---
 
-API Documentation: Swagger (drf-yasg) or DRF Spectacular
+## 🛠️ **Technologies Used**
 
-Other Libraries:
+- **Language/Framework**: Python, Django Rest Framework (DRF)
+- **Database**: PostgreSQL
+- **Authentication**: Simple JWT (`djangorestframework-simplejwt`)
+- **API Documentation**: Swagger (drf-yasg) or DRF Spectacular
+- **Other Libraries**:
+  - `djangorestframework`
+  - `djangorestframework-simplejwt`
 
-djangorestframework
+---
 
-djangorestframework-simplejwt
+## 🗃️ **Database Schema**
 
-🗃️ Database Schema
-Users Table: Managed by Django's default User model
+- **Users Table**: Managed by Django's default `User` model
+- **Products Table**:
+  - `name`
+  - `type`
+  - `sku`
+  - `image_url`
+  - `description`
+  - `quantity`
+  - `price`
 
-Products Table:
+---
 
-name
+## ⚙️ **Setup & Run Project**
 
-type
-
-sku
-
-image_url
-
-description
-
-quantity
-
-price
-
-⚙️ Setup & Run Project
 Follow the steps below to run the project locally:
 
-🔧 Prerequisites
-Python 3.8+
+### 🔧 **Prerequisites**
 
-PostgreSQL
+- Python 3.8+
+- PostgreSQL
+- pip (Python package manager)
+- Virtualenv (optional but recommended)
 
-pip (Python package manager)
+---
 
-Virtualenv (optional but recommended)
+### 📥 **Installation Steps**
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/inventory-system.git
+   cd inventory-system
 
 
 API Endpoints:
