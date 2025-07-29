@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      # Pass database config environment variables here. Adjust as needed.
+      DB_NAME: inventory_management
+      DB_USER: ritik_django
+      DB_PASSWORD: 0665
+      DB_HOST: db
+      DB_PORT: 5432
+      DEBUG: "True"
+      SECRET_KEY: "django-insecure-9v050su-&9d$m1f474#6q4etnt5=%^tw!1&qhl0)g@*v)vr!s4"
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: inventory_management
+      POSTGRES_USER: ritik_django
+      POSTGRES_PASSWORD: 0665
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
